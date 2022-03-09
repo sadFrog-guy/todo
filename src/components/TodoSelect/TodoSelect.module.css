@@ -1,0 +1,71 @@
+.entire.active {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: -1000;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 2000;
+    margin-bottom: 15px;
+}
+
+.select {
+    border-radius: 10px;
+    border: none;
+    border-top: 2px solid #fff;
+    border-left: 2px solid #fff;
+    transition: color .2s, border-left-color .2s, border-top-color .2s;
+    outline: none;
+    cursor: pointer;
+    padding: 5px 8px;
+    color: grey;
+    font-size: 0.8rem;
+    background-color: #fff;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.47);
+}
+.select:hover {
+    border-top: 2px solid royalblue;
+    border-left: 2px solid royalblue;
+}
+
+.select.active {
+    border-radius: 10px 10px 0 0;
+    border: 2px solid royalblue;
+}
+
+.select.selected {
+    color: black;
+}
+
+.options {
+    position: absolute;
+    top: 23px;
+    right: 0;
+    left: 0;
+    background-color: #fff;
+    border-radius: 0 0 10px 10px;
+    visibility: hidden;
+    padding: 3px 3px 3px 15px;
+    border: 2px solid royalblue;
+    border-top: none;
+    border-bottom: 4px solid royalblue;
+}
+.options.active {
+    visibility: visible;
+}
+
+.option {
+    list-style-type: none;
+    cursor: pointer;
+    padding: 2px 10px;
+}
+.option:hover {
+    background-color: #b6b6b6;
+    border-radius: 20px;
+}

@@ -1,0 +1,18 @@
+.input {
+    padding: 5px 8px;
+    background-color: #fff;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.47);
+    border: none;
+    border-top: 2px solid #fff;
+    border-left: 2px solid #fff;
+    transition: color .2s, border-left-color .2s, border-top-color .2s;
+    outline: none;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    font-family: 'Roboto Slab', serif;
+}
+
+.input:hover {
+    border-top: 2px solid royalblue;
+    border-left: 2px solid royalblue;
+}

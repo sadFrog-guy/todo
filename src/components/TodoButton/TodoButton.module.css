@@ -1,0 +1,25 @@
+.button {
+    font-family: 'Roboto Slab', serif;
+    background-color: #fff;
+    border: none;
+    border-top: 2px solid #fff;
+    border-left: 2px solid #fff;
+    padding: 3px 6px;
+    border-radius: 10px;
+    color: #656565;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.47);
+    cursor: pointer;
+    font-size: 16px;
+    transition: color .2s, border-left-color .2s, border-top-color .2s;
+    margin-bottom: 15px;
+}
+.button:hover {
+    color: royalblue;
+    border-top: 2px solid royalblue;
+    border-left: 2px solid royalblue;
+}
+
+.button:disabled {
+    color: #656565;
+    cursor: not-allowed;
+}

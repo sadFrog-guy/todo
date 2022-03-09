@@ -1,0 +1,98 @@
+.wrapper {
+    border-radius: 10px;
+    box-shadow: 0 0 0 3px rgba(199, 199, 199, 0.3);
+    width: 95%;
+    padding: 15px 0 15px 20px;
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.left_side {
+    width: 50%;
+}
+.right_side {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+}
+
+.colored_line {
+    width: 10px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 10px 0 0 10px;
+}
+
+.info {
+    margin-left: 20px;
+}
+
+.title {
+    font-size: 1.8rem;
+    color: #232323;
+}
+
+.text {
+    font-size: 1.1rem;
+    color: #656565;
+}
+
+.group {
+    display: flex;
+    align-items: flex-end;
+    margin-right: 10px;
+}
+
+.check {
+    width: 35px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.bubble {
+    width: 35px;
+    height: 35px;
+    background-color: royalblue;
+    z-index: 1000;
+    border-radius: 12px 0 0 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color .3s;
+}
+.bubble.delete {
+    background-color: darkred;
+}
+.bubble.update {
+    background-color: darkgreen;
+}
+
+.mark {
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    background-color: #d3d3d3;
+    z-index: 2000;
+    transition: background-color .3s;
+}
+.mark:hover {
+    background-color: skyblue;
+}
+.mark.delete {
+    background-color: #d3d3d3;
+}
+.mark.delete:hover {
+    background-color: tomato;
+}
