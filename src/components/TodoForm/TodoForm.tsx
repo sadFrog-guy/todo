@@ -43,10 +43,10 @@ const TodoForm: FC = () => {
         if(e.target.value.length < 3 || e.target.value.length > 25) {
             setError({
                 ...error,
-                titleError: 'Заголовок не должен быть меньше 3 или больше 25 символов'
+                titleError: 'Title should not be less than 3 or more than 25 characters'
             })
             if(!e.target.value) {
-                setError({...error, titleError: 'Заголовок не может быть пустым'})
+                setError({...error, titleError: 'Title cannot be empty'})
             }
         } else {
             setError({...error, titleError: ''})
@@ -59,10 +59,10 @@ const TodoForm: FC = () => {
         if(e.target.value.length < 3 || e.target.value.length > 25) {
             setError({
                 ...error,
-                bodyError: 'Описание не должно быть меньше 3 или больше 25 символов'
+                bodyError: 'Description must not be less than 3 or more than 25 characters'
             })
             if(!e.target.value) {
-                setError({...error, bodyError: 'Описание не может быть пустым'})
+                setError({...error, bodyError: 'Description cannot be empty'})
             }
         } else {
             setError({...error, bodyError: ''})
@@ -94,12 +94,12 @@ const TodoForm: FC = () => {
                 onClick={(e) => createTodo(e)}
                 disabled={!isValid}
             >
-                Создать
+                Create
             </TodoButton>
             {(error.titleDirty && error.titleError) && <p className={cl.error}>{error.titleError}</p>}
             <TodoInput
                 name='title'
-                placeholder="Заголовок"
+                placeholder="Title"
                 value={todo.title}
                 onChange={(e: ChangeEvent<HTMLInputElement>) => titleOnChange(e)}
                 onBlur={(e: React.FocusEvent<HTMLInputElement>) => inputOnBlur(e)}
@@ -109,21 +109,21 @@ const TodoForm: FC = () => {
                 name='body'
                 type="text"
                 value={todo.body}
-                placeholder="Описание"
+                placeholder="Description"
                 onChange={(e: ChangeEvent<HTMLInputElement>) => bodyOnChange(e)}
                 onBlur={(e: React.FocusEvent<HTMLInputElement>) => inputOnBlur(e)}
             />
             <TodoSelect
-                standartOption='Группировать'
+                standartOption='Group'
                 options={
-                    [{name: 'Работа'}, {name: 'Учеба'}, {name: 'Личное'}]
+                    [{name: 'Work'}, {name: 'Study'}, {name: 'Private'}]
                 }
                 setValue={setTodo}
                 value={todo}
                 setLastOption={setLastOption}
             />
             <div className={cl.color_picker}>
-                <p className={cl.text}>Выберите цвет:</p>
+                <p className={cl.text}>Choose color:</p>
                 <TodoRadioButton
                     value={todo}
                     setValue={setTodo}

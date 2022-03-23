@@ -4,7 +4,7 @@ import Clock from "../Clock/Clock";
 
 const DateBlock = () => {
     const [time, setTime] = useState<Date>(new Date())
-    const days = ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота']
+    const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
 
     useEffect(() => {
         setInterval(() => {

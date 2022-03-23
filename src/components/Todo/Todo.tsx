@@ -15,30 +15,31 @@ const Todo: FC = () => {
         <div className={cl.todo_wrapper}>
             <div className={cl.todo_content}>
                 <div className={cl.todo_instances} style={state.todos.length > 4 ? {overflowY: 'scroll'} : {}}>
+                    <div className={cl.bubbles}>
+                        <ActionBubble
+                            onClick={() => setAction('delete')}
+                            bubbleColor='darkred'
+                        >
+                            Delete
+                        </ActionBubble>
+                        <ActionBubble
+                            onClick={() => setAction('check')}
+                        >
+                            Check
+                        </ActionBubble>
+                    </div>
                     {state.todos.length !== 0
                         ? state.todos.map((todo) => {
                             return <TodoItem action={action} todo={todo}/>
                         })
                         :
                         <div className={cl.wrapper}>
-                            <p className={cl.todo_notExist}>Вы еще не создали ни одного TODO<br/>Так создайте!</p>
+                            <p className={cl.todo_notExist}>You haven't created any TODO yet<br/>Maybe you should create one?</p>
                         </div>
                     }
                 </div>
                 <div className={cl.todo_options}>
-                    <div className={cl.bubbles}>
-                        <ActionBubble
-                            onClick={() => setAction('delete')}
-                            bubbleColor='darkred'
-                        >
-                            Удалить
-                        </ActionBubble>
-                        <ActionBubble
-                            onClick={() => setAction('check')}
-                        >
-                            Чекнуть
-                        </ActionBubble>
-                    </div>
+
                     <DateBlock/>
                     <TodoForm/>
                 </div>
