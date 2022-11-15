@@ -22,3 +22,11 @@
 .current_date {
     margin-left: 10px;
 }
+
+@media (max-width: 1115px) {
+    .date_wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
