@@ -22,7 +22,7 @@ const DateBlock = () => {
                         }
                     })}
                     <p className={cl.date}>
-                        {time.toLocaleDateString()}
+                        {time.toLocaleDateString().slice(0, time.toLocaleDateString().length - 1)}
                     </p>
                 </div>
                 <Clock time={time}/>
